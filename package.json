@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/alamwebtech/indecision.git",
   "author": "md alam",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1"
+  }
 }
