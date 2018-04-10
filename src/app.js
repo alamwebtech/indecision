@@ -18,11 +18,24 @@ var template = (
 	
 	</div>);
 	
+//	var userName = "MD ALAM";
+//	var sentence = "Creating My Own Template";
+//	var ag = 30;
+//	var loc= "DE USA";
+	
+	var user = {
+	    userName: "MD ALAM",
+	sentence: "Creating my own Templates",
+	ag : 30,
+	loc: "Delaware"
+	};
+	
 	var myTemplate = (
 	<div>
-	<h2>Creating My Own Template</h2>
-	<p>I am at 30</p>
-	<p>I live in Delaware</p>
+	<h1>{user.userName}</h1>
+	<h2>{user.sentence.toUpperCase()}</h2>
+	<p>{user.ag}</p>
+	<p>{user.loc}</p>
 	</div>
 
 );
