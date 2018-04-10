@@ -55,9 +55,17 @@ var template = React.createElement(
 var user = {
 	userName: "MD ALAM",
 	sentence: "Creating my own Templates",
-	ag: 30,
-	loc: "Delaware"
+	age: 30,
+	location: "Delaware"
 };
+
+function myLocation(location) {
+	if (location) {
+		return location;
+	} else {
+		return "Location Unknown";
+	}
+}
 
 var myTemplate = React.createElement(
 	"div",
@@ -75,12 +83,14 @@ var myTemplate = React.createElement(
 	React.createElement(
 		"p",
 		null,
-		user.ag
+		"Age: ",
+		user.age
 	),
 	React.createElement(
 		"p",
 		null,
-		user.loc
+		"Location: ",
+		myLocation(user.location)
 	)
 );
 

@@ -26,16 +26,25 @@ var template = (
 	var user = {
 	    userName: "MD ALAM",
 	sentence: "Creating my own Templates",
-	ag : 30,
-	loc: "Delaware"
+	age : 30,
+	location: "Delaware"
 	};
+	
+	
+	function myLocation(location){
+	if (location){
+		return location;
+	}else{
+		return "Location Unknown"
+	}
+}
 	
 	var myTemplate = (
 	<div>
 	<h1>{user.userName}</h1>
 	<h2>{user.sentence.toUpperCase()}</h2>
-	<p>{user.ag}</p>
-	<p>{user.loc}</p>
+	<p>Age: {user.age}</p>
+	<p>Location: { myLocation(user.location)}</p>
 	</div>
 
 );
