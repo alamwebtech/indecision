@@ -94,8 +94,41 @@ var myTemplate = React.createElement(
 	)
 );
 
+var user1 = {
+	name: "JOHN",
+	profession: "Software Engineer",
+	age: 32
+};
+
+function people(name, profession) {
+	if (name) {
+		return name;
+	} else {
+		return "Unknown Person";
+	}
+}
+
+var myPeople = React.createElement(
+	"div",
+	null,
+	React.createElement(
+		"h3",
+		null,
+		"Welcome on board: ",
+		people(user1.name)
+	),
+	React.createElement(
+		"p",
+		null,
+		"Your profession is: ",
+		user1.profession
+	)
+);
+
+var peopleInfo = document.querySelector("#info");
 var appRoot = document.getElementById("app");
 var myRoot = document.querySelector(".myApp");
 
+ReactDOM.render(myPeople, peopleInfo);
 ReactDOM.render(myTemplate, appRoot);
 ReactDOM.render(template, myRoot);
