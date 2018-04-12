@@ -23,7 +23,7 @@ var template = (
 //	var ag = 30;
 //	var loc= "DE USA";
 	
-	var user = {
+	const user = {
 	    userName: "MD ALAM",
 	sentence: "Creating my own Templates",
 	age : 30,
@@ -39,7 +39,7 @@ var template = (
 	}
 }
 	
-	var myTemplate = (
+	const myTemplate = (
 	<div>
 	<h1>{user.userName}</h1>
 	<h2>{user.sentence.toUpperCase()}</h2>
@@ -49,7 +49,7 @@ var template = (
 
 );
 
-var user1 = {
+const user1 = {
 	name: "Mr. JOHN",
 	profession: "Software Engineer",
 	age: 32,
@@ -67,7 +67,7 @@ function people(name, profession){
 }
 
 
-var myPeople = (
+const myPeople = (
 <div>
 	<h3>Welcome on board: {user1.name?user1.name  : "You are unknown person and You are not welcome..!!"}</h3>
    <p>Your profession is: {user1.profession}</p>
@@ -82,9 +82,9 @@ var myPeople = (
 
 );
 	
-var peopleInfo = document.querySelector("#info")
-var appRoot = document.getElementById("app");
-var myRoot = document.querySelector(".myApp");
+const peopleInfo = document.querySelector("#info")
+const appRoot = document.getElementById("app");
+const myRoot = document.querySelector(".myApp");
 
 
 ReactDOM.render(myPeople, peopleInfo)
