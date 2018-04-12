@@ -50,7 +50,7 @@ var template = (
 );
 
 var user1 = {
-	name: "JOHN",
+	name: "Mr. JOHN",
 	profession: "Software Engineer",
 	age: 32
 };
@@ -67,7 +67,6 @@ var myPeople = (
 <div>
 	<h3>Welcome on board: {people(user1.name)}</h3>
    <p>Your profession is: {user1.profession}</p>
-	
 	
 </div>
 

@@ -95,7 +95,7 @@ var myTemplate = React.createElement(
 );
 
 var user1 = {
-	name: "JOHN",
+	name: "Mr. JOHN",
 	profession: "Software Engineer",
 	age: 32
 };
