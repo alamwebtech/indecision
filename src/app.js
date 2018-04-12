@@ -52,30 +52,40 @@ var template = (
 var user1 = {
 	name: "Mr. JOHN",
 	profession: "Software Engineer",
-	age: 32
+	age: 32,
+	option: ['Front End', 'Back end']
 };
 
 function people(name, profession){
 	if(name){
-		return name;
+		return <p>Name: {name}</p>;
 	}else{
 		return "Unknown Person"
 	}
+	
+	
 }
+
 
 var myPeople = (
 <div>
-	<h3>Welcome on board: {people(user1.name)}</h3>
+	<h3>Welcome on board: {user1.name?user1.name  : "You are unknown person and You are not welcome..!!"}</h3>
    <p>Your profession is: {user1.profession}</p>
 	
-</div>
+	{(user1.age && user1.age >18) && <h4>Youa are at: {user1.age}</h4>}
 
+{/* Using turnery operator */}
+
+   <h2>{user1.option.length > 0 ? "Here is your options" : "You have no options"}</h2>
+	
+</div>
 
 );
 	
 var peopleInfo = document.querySelector("#info")
 var appRoot = document.getElementById("app");
 var myRoot = document.querySelector(".myApp");
+
 
 ReactDOM.render(myPeople, peopleInfo)
 ReactDOM.render(myTemplate, appRoot);
