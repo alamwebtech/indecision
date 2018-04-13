@@ -1,10 +1,13 @@
 "use strict";
 
-var nameVar = "MD ALAM";
-var nameVar = "John";
-console.log('nameVar', nameVar);
+var squire = function squire(x) {
+	return x * x;
+};
 
-var nameLet = "Judi";
-var nameHer = "Michael";
+console.log(squire(8));
 
-console.log(nameLet, nameHer);
+var arrow = function arrow(x) {
+	return x * x;
+};
+
+console.log(arrow(10));
