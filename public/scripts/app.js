@@ -7,7 +7,7 @@ var squire = function squire(x) {
 console.log(squire(8));
 
 var arrow = function arrow(x) {
-	return x + x;
+	return x * x;
 };
 
 console.log(arrow(10));

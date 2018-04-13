@@ -4,9 +4,7 @@ const squire = function(x){
 
 console.log(squire(8));
 
-const arrow = (x)=>{
-	return x + x;
-};
+const arrow = (x)=> x * x;
 
 
 console.log (arrow(10));
