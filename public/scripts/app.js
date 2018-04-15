@@ -50,29 +50,32 @@ var template = React.createElement(
 var add = 0;
 
 var addOne = function addOne() {
-	console.log("addOne");
+	add = add + 5;
+	increment();
 };
-
-var templateTwo = React.createElement(
-	"div",
-	null,
-	React.createElement(
-		"h1",
-		null,
-		"Add Five each time: ",
-		add
-	),
-	React.createElement(
-		"button",
-		{ onClick: addOne },
-		" +1 Each Time"
-	)
-);
-
-console.log(templateTwo);
 
 var appTwo = document.getElementById("myApp");
 var appRoot = document.getElementById("app");
-
 ReactDOM.render(template, appRoot);
-ReactDOM.render(templateTwo, appTwo);
+
+var increment = function increment() {
+	var templateTwo = React.createElement(
+		"div",
+		null,
+		React.createElement(
+			"h1",
+			null,
+			"Add Five each time: ",
+			add
+		),
+		React.createElement(
+			"button",
+			{ onClick: addOne },
+			" +5 Each Time"
+		)
+	);
+
+	ReactDOM.render(templateTwo, appTwo);
+};
+
+increment();
