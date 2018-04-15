@@ -31,3 +31,21 @@ var user = {
 };
 
 user.printPlaceLived();
+
+/*
+Using map function 
+*/
+
+var multiplier = {
+	numbers: [12, 23, 45, 56, 10],
+	multiplyBy: 3,
+	multiply: function multiply() {
+		var _this2 = this;
+
+		return this.numbers.map(function (num) {
+			return num * _this2.multiplyBy;
+		});
+	}
+};
+
+console.log(multiplier.multiply());
