@@ -17,9 +17,9 @@ console.log(firstName("MD ALAM"));
 
 const user = {
 	name: "MD ALAM",
-	cities: ["NY", "PHIL", "WIL", "BOS"],
-	printPlaceLived: () => {
-        this.cities.forEach((city) => {
+	place: ["NY", "PHIL", "WIL", "BOS"],
+	printPlaceLived: function() {
+        this.place.forEach((city) => {
 			console.log(this.name + " has lived in " + city); 
 		});
 									

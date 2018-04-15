@@ -20,10 +20,12 @@ console.log(firstName("MD ALAM"));
 
 var user = {
 	name: "MD ALAM",
-	cities: ["NY", "PHIL", "WIL", "BOS"],
+	place: ["NY", "PHIL", "WIL", "BOS"],
 	printPlaceLived: function printPlaceLived() {
-		undefined.cities.forEach(function (city) {
-			console.log(undefined.name + " has lived in " + city);
+		var _this = this;
+
+		this.place.forEach(function (city) {
+			console.log(_this.name + " has lived in " + city);
 		});
 	}
 };
