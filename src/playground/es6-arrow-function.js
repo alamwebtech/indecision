@@ -18,7 +18,7 @@ console.log(firstName("MD ALAM"));
 const user = {
 	name: "MD ALAM",
 	place: ["NY", "PHIL", "WIL", "BOS"],
-	printPlaceLived: function() {
+	printPlaceLived () {
         this.place.forEach((city) => {
 			console.log(this.name + " has lived in " + city); 
 		});
@@ -27,3 +27,18 @@ const user = {
 };
 
 user.printPlaceLived();
+
+/*
+Using map function 
+*/
+
+const multiplier = {
+	numbers: [12, 23, 45, 56, 10],
+	multiplyBy: 3,
+	multiply(){
+		return this.numbers.map((num) => num * this.multiplyBy);
+	}
+	
+};
+
+console.log(multiplier.multiply());
