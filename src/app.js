@@ -18,75 +18,32 @@ var template = (
 	
 	</div>);
 	
-//	var userName = "MD ALAM";
-//	var sentence = "Creating My Own Template";
-//	var ag = 30;
-//	var loc= "DE USA";
 	
-	const user = {
-	    userName: "MD ALAM",
-	sentence: "Creating my own Templates",
-	age : 30,
-	location: "Delaware"
-	};
-	
-	
-	function myLocation(location){
-	if (location){
-		return location;
-	}else{
-		return "Location Unknown"
-	}
-}
-	
-	const myTemplate = (
-	<div>
-	<h1>{user.userName}</h1>
-	<h2>{user.sentence.toUpperCase()}</h2>
-	<p>Age: {user.age}</p>
-	<p>Location: { myLocation(user.location)}</p>
-	</div>
 
-);
 
-const user1 = {
-	name: "Mr. JOHN",
-	profession: "Software Engineer",
-	age: 32,
-	option: ['Front End', 'Back end']
+let add =0;
+
+const addOne = () => {
+	console.log("addOne");
 };
 
-function people(name, profession){
-	if(name){
-		return <p>Name: {name}</p>;
-	}else{
-		return "Unknown Person"
-	}
+	const templateTwo = (
 	
+	<div>
+		
+		<h1>Add Five each time: {add}</h1>
+		
+		<button onClick={addOne}> +1 Each Time</button>
+	</div>
+		
 	
-}
-
-
-const myPeople = (
-<div>
-	<h3>Welcome on board: {user1.name?user1.name  : "You are unknown person and You are not welcome..!!"}</h3>
-   <p>Your profession is: {user1.profession}</p>
+	);
 	
-	{(user1.age && user1.age >18) && <h4>Youa are at: {user1.age}</h4>}
+console.log(templateTwo);
 
-{/* Using turnery operator */}
-
-   <h2>{user1.option.length > 0 ? "Here is your options" : "You have no options"}</h2>
-	
-</div>
-
-);
-	
-const peopleInfo = document.querySelector("#info")
-const appRoot = document.getElementById("app");
-const myRoot = document.querySelector(".myApp");
+	const appTwo = document.getElementById("myApp");
+	const appRoot = document.getElementById("app");
 
 
-ReactDOM.render(myPeople, peopleInfo)
-ReactDOM.render(myTemplate, appRoot);
-ReactDOM.render(template, myRoot);
+	ReactDOM.render(template, appRoot);
+	ReactDOM.render(templateTwo, appTwo);
