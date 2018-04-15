@@ -54,6 +54,16 @@ var addOne = function addOne() {
 	increment();
 };
 
+var reset = function reset() {
+	add = 0;
+	increment();
+};
+
+var decrease = function decrease() {
+	add = add - 5;
+	increment();
+};
+
 var appTwo = document.getElementById("myApp");
 var appRoot = document.getElementById("app");
 ReactDOM.render(template, appRoot);
@@ -72,6 +82,16 @@ var increment = function increment() {
 			"button",
 			{ onClick: addOne },
 			" +5 Each Time"
+		),
+		React.createElement(
+			"button",
+			{ onClick: reset },
+			"Reset"
+		),
+		React.createElement(
+			"button",
+			{ onClick: decrease },
+			"Decrease"
 		)
 	);
 
