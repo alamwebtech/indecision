@@ -19,44 +19,6 @@ var template = (
 	</div>);
 	
 	
-let add =0;
-
-const addOne = () => {
-	add = add + 5;
-	increment();
-};
-
-const reset = () => {
-	add = 0;
-	increment();
-
-};
-
-const decrease = () => {
-	add = add -5;
-	increment();
-}
-
-	const appTwo = document.getElementById("myApp");
-	const appRoot = document.getElementById("app");
-	ReactDOM.render(template, appRoot);
+	const myApp = document.querySelector(".app");
 	
-
-const increment = () =>{
-	const templateTwo = (
-	
-	<div>
-		<h1>Add Five each time: {add}</h1>
-		
-		<button onClick={addOne}> +5 Each Time</button>
-		<button onClick = {reset}>Reset</button>
-		<button onClick= {decrease}>Decrease</button>
-	</div>
-
-	);
-	
-	ReactDOM.render(templateTwo, appTwo);
-	
-};
-
-increment();
+	ReactDOM.render(template, myApp);
