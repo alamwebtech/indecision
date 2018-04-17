@@ -15,23 +15,23 @@ const onFormSubmit = (e)=>{
 	if (option){
 		app.options.push(option);
 		e.target.elements.option.value = '';
-		appRender();
+		render();
 	}
 };
 
 
 	const myApp = document.querySelector("#app");
 
-const appRender = () => {
+const render = () => {
 	const template = (
 	<div>
 	<h1>{app.title}</h1>
-	{app.subtitle && <p>{app.subtitle}</p>}
-	<p>{app.options.length > 0 ? "Here are your Options" : "No Options"}</p>
-	
-	<p> {app.options.length} </P>
+	{app.subtitle && <p>{app.subtitle}</p>
+		}
+		 
+	<p>{app.options.length  >0 ? "Here are your Options" : "No Options"}</p>
+	 {app.options.length}
    
-	
 	<ol>
 	<li>Item One</li>
 	<li>Item Two</li>
@@ -42,9 +42,10 @@ const appRender = () => {
 	<button>Add Option</button>
 	</form>
 	</div>
+		
 	);
 	
 	ReactDOM.render(template, myApp);
 };
 
-appRender();
+render();
