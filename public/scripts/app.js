@@ -21,7 +21,16 @@ var onFormSubmit = function onFormSubmit(e) {
 	}
 };
 
+// Creating a remove button 
+
+var onRemoveAll = function onRemoveAll() {
+	app.options = [];
+	render();
+};
+
 var myApp = document.querySelector("#app");
+
+var numbers = [55, 101, 1000];
 
 var render = function render() {
 	var template = React.createElement(
@@ -43,6 +52,20 @@ var render = function render() {
 			app.options.length > 0 ? "Here are your Options" : "No Options"
 		),
 		app.options.length,
+		React.createElement(
+			"button",
+			{ onClick: onRemoveAll },
+			" Remove All"
+		),
+		numbers.map(function (number) {
+			return React.createElement(
+				"p",
+				{ key: number },
+				"Nymber:",
+				number,
+				" "
+			);
+		}),
 		React.createElement(
 			"ol",
 			null,

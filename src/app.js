@@ -19,8 +19,17 @@ const onFormSubmit = (e)=>{
 	}
 };
 
+// Creating a remove button 
+
+const onRemoveAll = () =>{
+	app.options =[];
+	render();
+};
+
 
 	const myApp = document.querySelector("#app");
+
+const numbers = [55, 101, 1000]
 
 const render = () => {
 	const template = (
@@ -31,7 +40,15 @@ const render = () => {
 		 
 	<p>{app.options.length  >0 ? "Here are your Options" : "No Options"}</p>
 	 {app.options.length}
-   
+		
+	<button onClick={onRemoveAll}> Remove All</button>
+		
+       {
+		numbers.map((number)=>{
+		return <p key={number}>Nymber:{number} </p>
+	   })
+		}
+
 	<ol>
 	<li>Item One</li>
 	<li>Item Two</li>
