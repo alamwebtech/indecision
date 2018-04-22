@@ -1,13 +1,34 @@
-'use strict';
+"use strict";
+
+var visibility = false;
+
+var toggleVisibility = function toggleVisibility() {
+	visibility = !visibility;
+	render();
+};
 
 var render = function render() {
 	var jsx = React.createElement(
-		'div',
+		"div",
 		null,
 		React.createElement(
-			'h1',
+			"h1",
 			null,
-			'Visibility Toggle'
+			"Visibility Toggle"
+		),
+		React.createElement(
+			"button",
+			{ onClick: toggleVisibility },
+			visibility ? "Hide Details" : "Show Details"
+		),
+		visibility && React.createElement(
+			"div",
+			null,
+			React.createElement(
+				"p",
+				null,
+				"Some Details you can now see..!!"
+			)
 		)
 	);
 	ReactDOM.render(jsx, document.getElementById('app'));
