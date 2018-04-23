@@ -1,8 +1,8 @@
-class Person {
-	constructor(name = "Anonymous") {
+class Person{
+	constructor(name = "Anonymous"){
 		this.name = name || "testing";
 	}
-	getGreeting() {
+	getGreeting(){
 		return `Hi I am ${this.name}`;
 	}
 }
