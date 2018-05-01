@@ -12,10 +12,13 @@ class Student extends Person{
 		super(nme, age);
 		this.major = major;
 	}
+	hasMajor(){
+		return !!this.major;
+	}
 }
 
 const me = new Student("John", 31, "Computer Science");
-console.log(me);
+console.log(me.hasMajoor());
 
 const other = new Student();
-console.log(other);
+console.log(other.hasMajor());
