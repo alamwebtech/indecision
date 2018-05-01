@@ -7,8 +7,15 @@ class Person{
 	}
 }
 
-const me = new Person("John");
-console.log(me.getGreeting());
+class Student extends Person{
+	constructor(name age, major){
+		super(nme, age);
+		this.major = major;
+	}
+}
 
-const other = new Person();
-console.log(other.getGreeting());
+const me = new Student("John", 31, "Computer Science");
+console.log(me);
+
+const other = new Student();
+console.log(other);
