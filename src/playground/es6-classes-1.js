@@ -17,6 +17,8 @@ class Student extends Person{
 	}
 }
 
+
+
 const me = new Student("John", 31, "Computer Science");
 console.log(me.hasMajoor());
 
